@@ -10,7 +10,7 @@ from datetime import timedelta
 
 conn = sqlite3.connect('weibo_PSA.sqlite') #generate a database to save relevant info of all the retrieved posts
 cur = conn.cursor()
-cur.execute('''CREATE TABLE IF NOT EXISTS weibo_yangmi(post_id INTEGER, depth INTEGER, retweeted_id INTEGER, 
+cur.execute('''CREATE TABLE IF NOT EXISTS weibo_miaopu(post_id INTEGER, depth INTEGER, retweeted_id INTEGER, 
             user_id INTEGER, screen_name TEXT, verification TEXT, followers_count INTEGER, 
             text TEXT, reposts_count INTEGER, created_at TEXT, original_post_created TEXT, time_difference,
             PRIMARY KEY(post_id,retweeted_id))''') #weibo_miaopu should be replaced by a new name for each original post
